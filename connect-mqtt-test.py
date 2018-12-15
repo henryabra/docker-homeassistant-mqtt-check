@@ -3,10 +3,10 @@ import os
 import sys
 
 client = mqtt.Client()
-print("Trying to connect to mosquitto @ " + os.environ['MOSQUITTO_TEST_HOST'])
+print("Trying to connect to mosquitto @ " + os.environ['MQTT_TEST_HOST'])
 
 try:
-    client.connect(os.environ['MOSQUITTO_TEST_HOST'])
+    client.connect(os.environ['MQTT_TEST_HOST'])
     client.disconnect()
     print("Success")
     sys.exit(0)
